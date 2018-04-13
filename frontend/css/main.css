@@ -62,3 +62,36 @@ body {
     cursor: pointer;
     background: #C62828;
 }
+
+.box{
+    color: #fff;
+    font-size: 1em;
+    padding: 10px;
+    border: none;
+}
+
+.mood-box{
+    position: relative;
+}
+
+.mood{
+    display: inline;
+}
+
+.mood img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    outline: hidden;
+}
+
+.mood img:hover{
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+}
