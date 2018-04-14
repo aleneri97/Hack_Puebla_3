@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- TODO: subir div.mood-->
+    <!-- TODO: ponerle diferentes íconos a cada mood -->
+    <!-- TODO: hacer texto mood más opaco -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>T.Beat</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tajawal:300,400|Pacifico">
+    <link rel="stylesheet" href="../static/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>T·Beat</h1>
+        <p>Tus palabras, tu música…</p>
+    </header>
+    <div class="main">
+        <div class="box">
+            <p class="text">¿Cómo te sientes?</p>
+            <div class="mood-box">
+                    <label>
+                        <input type="radio" name="mood" value="-1" />
+                        <img src="../static/Angry.png" alt="" class="img-responsive">
+                    </label>
+
+                    <label>
+                        <input type="radio" name="mood" value="-.333" />
+                        <img src="../static/Sad.png" alt="" class="img-responsive">
+                    </label>
+
+                    <label>
+                        <input id="" type="radio" name="mood" value="0.333" />
+                        <img src="../static/Chill.png" alt="" class="img-responsive">
+                    </label>
+
+                    <label>
+                        <input id="" type="radio" name="mood" value="1" />
+                        <img src="../static/Happy.png" alt="" class="img-responsive">
+                    </label>
+
+                    <label>
+                        <input id="" type="radio" name="mood" value="2" />
+                        <img src="../static/Adivina.png" alt="" class="img-responsive">
+                    </label>
+            </div>
+        </div>
+        <textarea placeholder="Escribe tu canción..." name="" id="sendTxt" cols="20" rows="3"></textarea>
+        <span class="btn btn-send" onclick="onClickSend()">
+            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+        </span>
+    </div>
+
+</body>
+
+</html>

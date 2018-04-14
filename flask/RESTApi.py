@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, request
+from flask import Flask, redirect, url_for, request, render_template
 from textblob import TextBlob
 
 app = Flask(__name__)
@@ -9,64 +9,7 @@ def success(name):
 
 @app.route('/input')
 def input():
-     return (""" 
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- TODO: subir div.mood-->
-  <!-- TODO: ponerle diferentes íconos a cada mood -->
-  <!-- TODO: hacer texto mood más opaco -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>T.Beat</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/main.css">
-
-</head>
-<body>
-    <header>
-        <h1>T·Beat</h1>
-        <p>Lorem Ipsum Dolore</p>
-    </header>
-    <div class="main">
-        <div class="box">
-            <p class="text">¿Cómo te sientes?</p>
-            <div class="mood-box">
-                <div class="mood">
-                    <img src="images/happy.jpg" alt="" class="img-responsive">
-                </div>
-                <div class="mood">
-                    <img src="images/happy.jpg" alt="" class="img-responsive">
-                </div>
-                <div class="mood mood-active">
-                    <img src="images/happy.jpg" alt="" class="img-responsive">
-                </div>
-                <div class="mood">
-                    <img src="images/happy.jpg" alt="" class="img-responsive">
-                </div>
-                <div class="mood">
-                    <img src="images/happy.jpg" alt="" class="img-responsive">
-                </div>
-                <div class="mood">
-                    <img src="images/happy.jpg" alt="" class="img-responsive">
-                </div>
-            </div>
-        </div>
-        <textarea placeholder="Escribe tu canción..." name="" id="" cols="20" rows="3"></textarea>
-        <span class="btn-send">
-            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-        </span>
-    </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-</body>
-</html>
-""")
+     return (render_template('index.html'))
 
 
 @app.route('/')
