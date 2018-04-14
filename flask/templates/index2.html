@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>No</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tajawal:300,400|Pacifico">
     <link rel="stylesheet" href="../static/main.css">
   </head>
@@ -11,18 +12,20 @@
         <h1>T·Beat</h1>
         <p>Tus palabras, tu música…</p>
     </header>
-    
-    <div id="audio-spectrum"></div>
 
-    <span class="btn-play" id="btn-play">
-        <h1>Icono va aqui</h1>
-    </span>
-    <span class="btn-pause" id="btn-pause">
-        <h1>Icono va aqui</h1>
-    </span>
-    <span class="btn-stop" id="btn-stop">
-        <h1>Icono va aqui</h1>
-    </span>
+    <div class="player">
+      <div id="audio-spectrum"></div>
+
+      <span class="btn-play" id="btn-play">
+          <i class="fa fa-play" aria-hidden="true"></i>
+      </span>
+      <span class="btn-pause" id="btn-pause">
+          <i class="fa fa-pause" aria-hidden="true"></i>
+      </span>
+      <span class="btn-stop" id="btn-stop">
+          <i class="fa fa-stop" aria-hidden="true"></i>
+      </span>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.3.7/wavesurfer.min.js"></script>
 
