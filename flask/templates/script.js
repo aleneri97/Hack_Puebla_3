@@ -1,17 +1,7 @@
-$(document).ready(function (params) {
+$(document).ready(function () {
     onClickSend = function () {
         var textArea = $("#sendTxt").val();
 
-        $.ajax({
-            url: ,
-            method: 'POST',
-            data: ,
-            beforeSend: function () {
-
-            },
-            success: function (res) {
-
-            }
-        });
+        $(".btn-send").html('<i class="fa fa-spinner fa-spin" aria-hidden="true"></i>');
     }
 });
