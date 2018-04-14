@@ -101,10 +101,10 @@ def main():
                 to_audio(random.choice(sf2files), mid, out_dir, out_type, txt, append)
 
     except getopt.GetoptError, err:
-        print str(err)
+        #print str(err)
         sys.exit(2)
     except Exception, exc:
-        print str(exc)
+        #print str(exc)
         sys.exit(2)
 
 if __name__ == '__main__':
