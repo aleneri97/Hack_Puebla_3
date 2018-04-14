@@ -170,9 +170,17 @@ label > input:focus + img{ /* (RADIO CHECKED) IMAGE STYLES */
   border-radius: 1000px;
 }
 
-#audio-spectrum{
+.player{
   position: relative;
   max-width: 800px;
   top: 400px;
-  margin: 0px 20px 0px 20px;
+  margin: 0;
+}
+
+.player span{
+  margin: 10px 20px 0 60px;
+}
+
+#audio-spectrum{
+  margin-bottom: 40px;
 }
