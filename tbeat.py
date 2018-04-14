@@ -35,8 +35,8 @@ def createSong(text, sentiment) :
 	return pattern
 
 def main() :
-	text = "some random sad text"
-	sentiment = -0.7
+	text = "I'm very sad and I want to die"
+	sentiment = 0.8
 	if len(sys.argv) == 3 :
 		var = sys.argv
 		text = var[1]
