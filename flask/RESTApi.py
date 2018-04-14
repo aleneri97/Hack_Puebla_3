@@ -9,7 +9,7 @@ def success(name):
 
 @app.route('/input')
 def input():
-     return (render_template('/frontend/index.html'))
+     return (render_template('index.html'))
 
 
 @app.route('/')
