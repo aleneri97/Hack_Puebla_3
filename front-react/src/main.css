@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Tajawal:300,400|Pacifico');
+body, html, textarea {
+  font-family: 'Tajawal', sans-serif;
+}
+
+html, body {
+  background: url(images/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+header {
+  color: #FAFAFA;
+  position: relative;
+  top: 100px;
+  left: 30px;
+  font-size: 1.3em;
+}
+header h1{
+  letter-spacing: .2em;
+  font-family: 'Pacifico', cursive;
+}
+header p {
+  position: relative;
+  left: 20px;
+  font-size: .9em;
+}
+.main {
+  border: 0;
+  border-radius: 4px;
+  padding: 40px;
+  margin-top: 20em;
+  max-width: 600px;
+}
+
+.main textarea {
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1.4em;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #9E9E9E;
+  transition: 0.4s all;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  outline: none;
+}
+
+.main textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #fff;
+}
+
+.main .btn-send {
+  margin: -1.6em auto;
+  border: 1px solid #000;
+  padding: 1em 1.4em 0.9em 1.2em;
+  font-size: 1.4em;
+  border-radius: 50%;
+  border: none;
+  color: #fff;
+  background: #536DFE;
+  transition: 0.4s all;
+  float: right;
+  left: 60px;
+  position: relative;
+  z-index: 100;
+}
+
+.main .btn-send:hover {
+  cursor: pointer;
+  background: #C62828;
+}
+
+.box {
+  position: relative;
+  bottom: -10px;
+  color: #fff;
+  font-size: 1em;
+  padding: 10px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.box p {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.box .text {
+  color: #f9f9f9;
+}
+
+.mood-box {
+  position: relative;
+}
+
+.mood {
+  display: inline;
+}
+
+.mood img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  outline: hidden;
+}
+
+.mood img:hover {
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+.mood-active img{
+  border: 4px solid #2196f3;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
