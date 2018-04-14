@@ -6,16 +6,19 @@ import midi
 from music_abstract import Scale
 
 
-chords = chordProgressionGenerator.createProgression(Scale(0, "MAJORSCALE"))
+chords = chordProgressionGenerator.createProgression(Scale(0, "MINORSCALE"))
+melody = chordProgressionGenerator.createMelody(Scale(0, "MINORSCALE"), chords)
 pattern = midi.Pattern()
-track = midi.Track()
-pattern.append(track)
+chordsTrack = midi.Track()
+melodyTrack = midi.Track()
+pattern.append(chordsTrack)
+pattern.append(melodyTrack)
 start = MTime()
 for chord in chords:
-	MIDIParser.chordToMIDI(chord, start, track)
+	MIDIParser.arpeggiator(chord, start, chordsTrack)
 	start.beat += 4
-
+MIDIParser.melodyToMIDI(melody, melodyTrack)
 eot = midi.EndOfTrackEvent(tick=1)
-track.append(eot)
+chordsTrack.append(eot)
 print pattern
 midi.write_midifile("example.mid", pattern)

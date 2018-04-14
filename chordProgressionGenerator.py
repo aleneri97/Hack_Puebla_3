@@ -23,13 +23,40 @@ minorProgression = [
 ]
 def createProgression(scale) :
 	chords = [0,0,0,0]
-	chords[0] = Chord(1, scale)
-	lastChord = 1
+	chords[0] = Chord(0, scale)
+	lastChord = 0
 	for i in range(3):
 		idx = random.randint(1, len(majorProgression[lastChord - 1]))
 		lastChord = majorProgression[lastChord - 1][idx - 1]
 		chords[i + 1] = Chord(lastChord, scale)
 	return chords
+
+def createMelody(scale, chords) :
+	RYTHM = [
+		[0.75, 0.75, 0.5, 0.75, 0.75, 0.5],
+		[0.5,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25, 0.5,0.25,0.75],
+		[0.25,0.25,0.25,0.25,0.5,0.25,0.5,0.25,0.25,0.25,0.5,0.5],
+		[0.5,0.5,0.5,0.25,0.5,0.25,0.5],
+		[0.5,0.25,0.5,0.75,0.5,1,0.5]
+	]
+	beat = 0.0
+	rythm = random.choice(RYTHM)
+	melody = []
+	idx = 0
+	while beat < 16 :
+		if beat >= 0 :
+			chord = chords[0]
+		if beat >= 4 :
+			chord = chords[1]
+		if beat >= 8 :
+			chord = chords[2]
+		if beat >= 12 :
+			chord = chords[3]
+		melody.append([rythm[idx], chord.tones[0]])
+		beat += rythm[idx]
+		idx += 1
+		idx %= len(rythm)
+	return melody
 
 def main() :
 	pass

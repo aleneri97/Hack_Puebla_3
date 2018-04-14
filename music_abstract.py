@@ -29,15 +29,15 @@ class Chord():
 		self.scale = scale
 		self.tones = [0,0,0]
 		self.tones[0] = scale.absolute[chordTone]
-		self.tones[1] = scale.absolute[chordTone + 3]
-		self.tones[2] = scale.absolute[chordTone + 5]
+		self.tones[1] = scale.absolute[chordTone + 2]
+		self.tones[2] = scale.absolute[chordTone + 4]
 
 class MTime():
 	"""docstring for MTime."""
 
 	def __init__(self, beat = None, bpm = None, mtime = None):
 		self.beat = 0
-		self.bpm = 120
+		self.bpm = 110
 		if beat is not None :
 			self.beat = beat
 		if bpm is not None :
@@ -48,4 +48,12 @@ class MTime():
 
 
 	def toTicks(self) :
-		return (60 * 100 / self.bpm) *  (self.beat)
+		return int((60 * 220 / self.bpm) *  (self.beat))
+
+RYTHM = [
+	[0.75, 0.75, 0.5, 0.75, 0.75, 0.5],
+	[0.5,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25, 0.5,0.25,0.75],
+	[0.25,0.25,0.25,0.25,0.5,0.25,0.5,0.25,0.25,0.25,0.5,0.5],
+	[0.5,0.5,0.5,0.25,0.5,0.25,0.5],
+	[0.5,0.25,0.5,0.75,0.5,1,0.5]
+]
