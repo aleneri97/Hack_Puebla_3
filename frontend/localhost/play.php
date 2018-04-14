@@ -1,3 +1,5 @@
+<?php echo $_POST['mood']; ?>
+<?php echo $_POST['text']; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +21,7 @@
 <body>
   <header>
     <h1>T·Beat</h1>
-    <p>Tus palabras, tu música…</p>
+    <p>Lorem Ipsum Dolore</p>
   </header>
   <div class="main">
     <div class="box">
@@ -28,31 +30,31 @@
 
         <form action="play.php" method="post">
           <label>
-              <input type="radio" name="mood" value="-1" />
+              <input type="radio" name="mood" value="" />
               <img src="images/happy.jpg">
           </label>
 
           <label>
-            <input type="radio" name="mood" value="-.5"/>
+            <input type="radio" name="mood" value="big"/>
             <img src="images/happy.jpg">
           </label>
 
           <label>
-            <input id="" type="radio" name="mood" value="0" />
+            <input id="" type="radio" name="mood" value="med" />
             <img src="images/happy.jpg">
           </label>
 
           <label>
-            <input id="" type="radio" name="mood" value=".5" />
+            <input id="" type="radio" name="mood" value="long" />
             <img src="images/happy.jpg">
           </label>
           <label>
-              <input type="radio" name="mood" value="1" />
+              <input type="radio" name="mood" value="small" />
               <img src="images/happy.jpg">
           </label>
 
           <label>
-            <input type="radio" name="mood" value="2"/>
+            <input type="radio" name="mood" value="big"/>
             <img src="images/happy.jpg">
           </label>
           <textarea placeholder="Escribe tu canción..." name="" id="" cols="20" rows="3"></textarea>

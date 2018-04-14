@@ -155,3 +155,7 @@ label > input:hover + img{ /* (RADIO CHECKED) IMAGE STYLES */
   border:4px solid white;
   border-radius: 1000px;
 }
+label > input:focus + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:4px solid #4496EC;
+  border-radius: 1000px;
+}
