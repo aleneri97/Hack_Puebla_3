@@ -66,7 +66,7 @@ def createMelody(scale, chords, seed = None) :
 			melody.append([rythm[idx], chord.scale.absolute[lastnote + direction]])
 			lastnote += direction
 			if lastnote < 0 : lastnote =0
-		direction = random.choice([-2,-1,-1,0,0,0,0,1,1,2])
+		direction = random.choice([-2,-1,-1,-1,0,0,0,0,1,1,1,2])
 		beat += rythm[idx]
 		idx += 1
 		idx %= len(rythm)
