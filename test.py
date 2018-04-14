@@ -6,8 +6,8 @@ import midi
 from music_abstract import Scale
 
 
-chords = chordProgressionGenerator.createProgression(Scale(0, "MINORSCALE"))
-melody = chordProgressionGenerator.createMelody(Scale(0, "MINORSCALE"), chords)
+chords = chordProgressionGenerator.createProgression(Scale(2, "MAJORSCALE"))
+melody = chordProgressionGenerator.createMelody(Scale(2, "MAJORSCALE"), chords)
 pattern = midi.Pattern()
 chordsTrack = midi.Track()
 melodyTrack = midi.Track()

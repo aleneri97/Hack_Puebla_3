@@ -21,7 +21,9 @@ minorProgression = [
 	[2,4,5],
 	[1]
 ]
-def createProgression(scale) :
+def createProgression(scale, seed = None) :
+	if seed is not None :
+		random.seed(seed)
 	chords = [0,0,0,0]
 	chords[0] = Chord(0, scale)
 	lastChord = 0
@@ -33,7 +35,9 @@ def createProgression(scale) :
 
 
 
-def createMelody(scale, chords) :
+def createMelody(scale, chords, seed = None) :
+	if seed is not None :
+		random.seed(seed)
 	RYTHM = [
 		[0.75, 0.75, 0.5, 0.75, 0.75, 0.5],
 		[0.5,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25, 0.5,0.25,0.75],
@@ -62,7 +66,7 @@ def createMelody(scale, chords) :
 			melody.append([rythm[idx], chord.scale.absolute[lastnote + direction]])
 			lastnote += direction
 			if lastnote < 0 : lastnote =0
-		direction = random.choice([-2,-1,-1,0,0,0,1,1,2])
+		direction = random.choice([-2,-1,-1,0,0,0,0,1,1,2])
 		beat += rythm[idx]
 		idx += 1
 		idx %= len(rythm)
