@@ -1,6 +1,8 @@
 import random
 from music_abstract import Chord
 from music_abstract import Scale
+from music_abstract import MTime
+import midi
 majorProgression = [
 	[2,3,4,5,6,7],
 	[5,7],
@@ -30,8 +32,7 @@ def createProgression(scale) :
 	return chords
 
 def main() :
-	for chord in createProgression(Scale("MAJORSCALE")):
-		print chord.tones
+	pass
 
 if __name__ == "__main__":
     main()
