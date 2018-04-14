@@ -82,11 +82,41 @@ header p {
 }
 
 .btn-play{
-  background: #43A047;
+  background: #0091EA;
   color: #fff;
-  padding: 1em;
+  padding: 1.5em 1em 1em 1.5em;
+  border-radius: 100px;
 }
-
+.btn-play i {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 auto;
+  display: inline-block;
+}
+.btn-pause{
+  background: #0091EA;
+  color: #fff;
+  padding: 1.5em 1.3em 1.1em 1.5em;
+  border-radius: 100px;
+}
+.btn-pause i {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 auto;
+  display: inline-block;
+}
+.btn-stop{
+  background: #0091EA;
+  color: #fff;
+  padding: 1.5em 1.5em 1.1em 1.5em;
+  border-radius: 100px;
+}
+.btn-stop i {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 auto;
+  display: inline-block;
+}
 .main .btn-send:hover {
   cursor: pointer;
   background: #C62828;
@@ -179,6 +209,7 @@ label > input:focus + img{ /* (RADIO CHECKED) IMAGE STYLES */
 
 .player span{
   margin: 10px 20px 0 60px;
+  padding: 1em auto 1em 2em;
 }
 
 #audio-spectrum{
