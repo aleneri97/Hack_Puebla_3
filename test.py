@@ -21,4 +21,4 @@ MIDIParser.melodyToMIDI(melody, melodyTrack)
 eot = midi.EndOfTrackEvent(tick=1)
 chordsTrack.append(eot)
 print pattern
-midi.write_midifile("example.mid", pattern)
+midi.write_midifile("track.mid", pattern)
