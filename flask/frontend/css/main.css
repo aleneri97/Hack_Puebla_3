@@ -130,3 +130,32 @@ header p {
   width: 100%;
   height: auto;
 }
+
+.mood-box img {
+  width: 50px;
+  height: 50px; /* Tal vez esto se pueda quitar y se ve biens*/
+  border-radius: 1000px;
+}
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  width: 20px;
+  cursor:pointer;
+  border:2px solid transparent;
+  border-radius: 1000px;
+  width:100px;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:4px solid #4496EC;
+  border-radius: 1000px;
+}
+label > input:hover + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:4px solid white;
+  border-radius: 1000px;
+}
+label > input:focus + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:4px solid #4496EC;
+  border-radius: 1000px;
+}
