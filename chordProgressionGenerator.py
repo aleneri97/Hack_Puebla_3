@@ -31,6 +31,8 @@ def createProgression(scale) :
 		chords[i + 1] = Chord(lastChord, scale)
 	return chords
 
+
+
 def createMelody(scale, chords) :
 	RYTHM = [
 		[0.75, 0.75, 0.5, 0.75, 0.75, 0.5],
@@ -43,6 +45,8 @@ def createMelody(scale, chords) :
 	rythm = random.choice(RYTHM)
 	melody = []
 	idx = 0
+	direction = random.choice([-2,-1,-1,0,0,0,1,1,2])
+	lastnote = random.choice([1,2,3])
 	while beat < 16 :
 		if beat >= 0 :
 			chord = chords[0]
@@ -52,10 +56,32 @@ def createMelody(scale, chords) :
 			chord = chords[2]
 		if beat >= 12 :
 			chord = chords[3]
-		melody.append([rythm[idx], chord.tones[0]])
+		if int(beat) % 4 == 0 or int(beat) % 4 ==  2:
+			melody.append([rythm[idx], random.choice(chord.tones)])
+		else :
+			melody.append([rythm[idx], chord.scale.absolute[lastnote + direction]])
+			lastnote += direction
+			if lastnote < 0 : lastnote =0
+		direction = random.choice([-2,-1,-1,0,0,0,1,1,2])
 		beat += rythm[idx]
 		idx += 1
 		idx %= len(rythm)
+	maxlen = 0
+	for note in melody :
+		if note[0] > maxlen : maxlen = note[0]
+	beat = 0.0
+	for note in melody :
+		if beat >= 0 :
+			chord = chords[0]
+		if beat >= 4 :
+			chord = chords[1]
+		if beat >= 8 :
+			chord = chords[2]
+		if beat >= 12 :
+			chord = chords[3]
+		if note[0] == maxlen :
+			note[1] =  random.choice(chord.tones)
+		beat += note[0]
 	return melody
 
 def main() :
